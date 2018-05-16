@@ -18,7 +18,7 @@ void Merge(int a[], int left, int mid, int right) //ºÏ²¢Á½¸öÒÑÅÅºÃĞòµÄÊı×éa[left
 	int j = mid + 1; //ºóÒ»Êı×éµÄÆğÊ¼ÔªËØ
 	while (i <= mid && j <= right)
 	{
-		temp[index++] = a[i] <= a[j] ? a[i++] : a[j++]; //´øµÈºÅ±©ÕÇ¹é²¢ÅÅĞòµÄÎÈ¶¨ĞÔ
+		temp[index++] = a[i] <= a[j] ? a[i++] : a[j++]; //´øµÈºÅ±£Ö¤¹é²¢ÅÅĞòµÄÎÈ¶¨ĞÔ
 	}
 	while (i <= mid)
 	{
@@ -49,7 +49,7 @@ void MergeSortRecursion(int a[], int left, int right) //µİ¹éÊµÏÖµÄ¹é²¢ÅÅĞò(×Ô¶¥Ï
 void MergeSortIteration(int a[], int len) //·Çµİ¹é£¨µü´ú£©ÊµÏÖµÄ¹é²¢ÅÅĞò(×Ôµ×ÏòÉÏ)
 {
 	int left, mid, right;			 //×ÓÊı×éË÷Òı£¬Ç°Ò»¸öÎªa[left...mid],ºóÒ»¸ö×ÓÊı×éÎªa[mid+1...right]
-	for (int i = 1; i < len; i *= 2) //×ÓÊı×éµÄ´úÏúi³õÊ¼Îª1£¬Ã¿ÂÖ·­±¶
+	for (int i = 1; i < len; i *= 2) //×ÓÊı×éµÄ´óĞ¡³õÊ¼Îª1£¬Ã¿ÂÖ·­±¶
 	{
 		left = 0;
 		while (left + i < len) //ºóÒ»¸ö×ÓÊı×é´æÔÚ£¨ĞèÒª¹é²¢£©

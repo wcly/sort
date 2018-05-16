@@ -20,6 +20,7 @@ void Merge(int a[], int left, int mid, int right) //合并两个已排好序的数组a[left
 	{
 		temp[index++] = a[i] <= a[j] ? a[i++] : a[j++]; //带等号保证归并排序的稳定性
 	}
+	/*将剩下的存入数组*/
 	while (i <= mid)
 	{
 		temp[index++] = a[i++];
@@ -28,7 +29,7 @@ void Merge(int a[], int left, int mid, int right) //合并两个已排好序的数组a[left
 	{
 		temp[index++] = a[j++];
 	}
-	for (int k = 0; k < len; k++)
+	for (int k = 0; k < len; k++) //复制回原数组
 	{
 		a[left++] = temp[k];
 	}
